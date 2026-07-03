@@ -30,7 +30,14 @@
             <p class="text-grey-darker text-2xl md:text-3xl mb-7 leading-normal"></p>
             <p class="sub-header"><h1 class="oops">Oops!!好像又翻车惹，我们会尽快恢复的啦！[应该不会很久叭!]</h1></p>
             <br><br>
-            ::CLOUDFLARE_ERROR_1000S_BOX::
+
+            <div class="sub-footer">
+                ::CLOUDFLARE_ERROR_1000S_BOX::
+                <div class="w-full h-2 bg-grey-light my-3 md:my-6"></div>
+                <ul>
+                    <li>Performance &amp; Security by Cloudflare</li>
+                </ul>
+            </div>
 
         </div>
     </div>
@@ -43,6 +50,9 @@
         body { background-color: rgba(0, 0, 0, 0.842); color: #fff !important; }
         .oops { color: #fff !important; }
         .sub-footer ul li { color: #fff !important; }
+        /* Make the Cloudflare error box (title, description, Ray ID / URL details) readable on dark */
+        .sub-footer, .sub-footer * { color: #d7d7d7 !important; }
+        .sub-footer a, .sub-footer a * { color: #6cb2ff !important; }
     }
 </style>
 </body>
