@@ -47,36 +47,11 @@
     </div>
 </div>
 
-<script>
-    var now = new Date();
-    var hour = now.getHours();
-    console.log(hour)
-    if(hour<5 || hour>19){
-        document.write("<style>body{\n" +
-            "    background-color: rgba(0, 0, 0, 0.842);\n" +
-            "    color: white!important;\n" +
-            "}\n" +
-            ".oops{\n" +
-            "    color: white!important;\n" +
-            "\n" +
-            "}\n" +
-            ".sub-footer ul li{\n" +
-            "    color: white!important\n" +
-            "}</style>");
-    }else {
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.write("<style>body{\n" +
-                "    background-color: rgba(0, 0, 0, 0.842);\n" +
-                "    color: white!important;\n" +
-                "}\n" +
-                ".oops{\n" +
-                "    color: white!important;\n" +
-                "\n" +
-                "}\n" +
-                ".sub-footer ul li{\n" +
-                "    color: white!important\n" +
-                "}</style>");
-        }
+<style>
+    @media (prefers-color-scheme: dark) {
+        body { background-color: rgba(0, 0, 0, 0.842); color: #fff !important; }
+        .oops { color: #fff !important; }
+        .sub-footer ul li { color: #fff !important; }
     }
-</script>
+</style>
 </body></html>
