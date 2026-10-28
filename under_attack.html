@@ -52,8 +52,9 @@
         body { background-color: rgba(0, 0, 0, 0.842); color: #fff !important; }
         .oops { color: #fff !important; }
         .sub-footer ul li { color: #fff !important; }
-        /* CF 在自定义页面上会无视 prefers-color-scheme 强制 light 主题，只能从外面把 iframe 反色 */
-        .content-body iframe { filter: invert(.9) hue-rotate(180deg); }
+        /* CF 在自定义页面上会无视 prefers-color-scheme 强制 light 主题，且 iframe 在 closed shadow root 里选不到，
+           只能借 Turnstile 固定的 cf-turnstile-response 定位外层容器整体反色 */
+        .content-body div:has(> input[name="cf-turnstile-response"]) { filter: invert(.9) hue-rotate(180deg); }
     }
 </style>
 </body></html>
