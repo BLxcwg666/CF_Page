@@ -58,6 +58,8 @@
         .oops { color: #fff !important; }
         .sub-footer ul li { color: #fff !important; }
         .left-sec p { color: #fff !important; } /* 这个页面与众不同的地方 */
+        /* CF 在自定义页面上会无视 prefers-color-scheme 强制 light 主题，只能从外面把 iframe 反色 */
+        .content-body iframe { filter: invert(.9) hue-rotate(180deg); }
     }
 </style>
 </body></html>
